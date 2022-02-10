@@ -1,0 +1,50 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-blue: #45567d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #042940;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#welcome-section {
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: rgb(125, 91, 158);
+}
+
+.navlist {
+    display: flex;
+    list-style-type: none;
+}
+.navlist li{
+
+    padding: 1rem;
+}
+.navlist a {
+    display: block;
+    text-decoration: none;
+    color: (--main-white);
+    padding: 1rem;
+
+}
+
+.navlist a:hover {
+background: var(--main-blue)
+}
