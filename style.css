@@ -25,6 +25,12 @@
     align-items: center;
 }
 
+#interestpage-img{
+    width: 35%;
+    height: auto;
+    padding: 0rem .50rem;
+}
+
 h1 {
     background-color: rgb(125, 91, 158);
 }
