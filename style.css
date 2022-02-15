@@ -1,7 +1,10 @@
+/* Custom properties/variables  */
+
 :root {
     --main-white: #f0f0f0;
     --main-blue: #45567d;
-}
+    --main-gray: #303841;
+  }
 
 * {
     margin: 0;
@@ -11,46 +14,46 @@
 #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #042940;
+    background-color: #1B5760;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
-#welcome-section {
-    background-color: bisque;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #interestpage-img{
     width: 35%;
     height: auto;
-    padding: 0rem .50rem;
+    padding: 0;
 }
 
-h1 {
-    background-color: rgb(125, 91, 158);
-}
 
 .navlist {
     display: flex;
     list-style-type: none;
 }
 .navlist li{
-
-    padding: 1rem;
+    color: pink;
 }
 .navlist a {
     display: block;
     text-decoration: none;
-    color: (--main-white);
-    padding: 1rem;
+    color: white;
+    padding: 1.5rem;
+}
 
+a {
+    text-decoration: none;
 }
 
 .navlist a:hover {
 background: var(--main-blue)
+}
+
+#welcome-section {
+    background-color: #F2E6D8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
