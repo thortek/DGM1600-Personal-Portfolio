@@ -11,6 +11,15 @@
     padding: 0;
 
 }
+
+html {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+}
+
+
+
 #navbar {
     display: flex;
     justify-content: flex-end;
@@ -57,3 +66,27 @@ background: var(--main-blue)
     justify-content: center;
     align-items: center;
 }
+
+h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 640px / 16px = 28.75em */
+  @media (max-width: 40em) {
+    html {
+      font-size: 50%;
+    }
+  }
