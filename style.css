@@ -2,8 +2,8 @@
 
 :root {
     --main-white: #f0f0f0;
-    --main-blue: #45567d;
-    --main-gray: #303841;
+    --main-green: #ACBEAE;
+    --main-teal: #1B5760;
   }
 
 * {
@@ -18,22 +18,14 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #1B5760;
+    background-color: #730A1D;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-}
-
-#interestpage-img{
-    width: 35%;
-    height: auto;
-    padding: 0;
 }
 
 
@@ -56,7 +48,7 @@ a {
 }
 
 .navlist a:hover {
-background: var(--main-blue)
+background: var(--main-teal)
 }
 
 #welcome-section {
@@ -68,7 +60,53 @@ background: var(--main-blue)
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    padding: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #1B5760;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ACBEAE;
+}
+.project-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.project-tiles a {
+  margin: 2rem;
+
+}
+.project-tile img {
+  width: 20rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2E6D8;
+}
+
+.contact-links a {
+  font-size: xx-large;
+  padding: 2rem 3rem
+}
+
+footer {
+  font-size: large;
+  text-align: center;
+  padding: 3rem;
+  background-color: #F2E6D8;
+  color: #1B5760;
 }
 
 @media (max-width: 75em) {
