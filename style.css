@@ -1,10 +1,12 @@
 /* Custom properties/variables  */
 
 :root {
-    --main-white: #f0f0f0;
-    --main-green: #ACBEAE;
-    --main-teal: #1B5760;
+    --main-yellow: #F2BC57;
+    --main-purple: #5464BF;
+    --main-darkblue: #2C3359;
+    --main-blue: #79AEF2;
   }
+
 
 * {
     margin: 0;
@@ -13,7 +15,8 @@
 }
 
 body {
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 html {
@@ -25,7 +28,7 @@ html {
 #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #730A1D;
+    background-color: #F27E63;
     position: fixed;
     top: 0;
     left: 0;
@@ -37,15 +40,14 @@ html {
     display: flex;
     list-style-type: none;
 }
-.navlist li{
-    color: pink;
-}
+
 .navlist a {
     display: block;
     text-decoration: none;
     color: white;
     padding: 1.5rem;
     font-size:larger;
+    font-weight: 500;
 }
 
 a {
@@ -53,11 +55,12 @@ a {
 }
 
 .navlist a:hover {
-background: var(--main-teal)
+background: #5464BF;
+color: #79AEF2;
 }
 
 #welcome-section {
-    background-color: #F2E6D8;
+    background-color: #2C3359;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -70,14 +73,14 @@ h1 {
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #1B5760;
+    color: #79AEF2;
 }
 
 #projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ACBEAE;
+  background-color: #5464BF;
 }
 .project-tiles {
   display: flex;
@@ -96,9 +99,11 @@ h1 {
 }
 
 figcaption {
-  font-size: large;
+  font-size: x-large;
+  font-weight: 300;
   text-align: center;
-  background-color: #1B5760;
+  background-color: #2C3359;
+  color: #79AEF2;
   border-radius: 2px 2px 6px 6px;
 }
 
@@ -107,7 +112,7 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F2E6D8;
+  background-color: #2C3359;
 }
 
 .contact-links {
@@ -115,7 +120,7 @@ figcaption {
 }
 
 .contact-links a {
-  color: #ACBEAE;
+  color:  #f0f0f0;
   font-size: xx-large;
   padding: 2rem 3rem;
   display: block;
@@ -123,7 +128,7 @@ figcaption {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #730A1D;
+  text-shadow: 2px 2px 1px #5464BF;
   transition: transform 0.3s ease-out;
 }
 
@@ -135,8 +140,8 @@ footer {
   font-size: large;
   text-align: center;
   padding: 3rem;
-  background-color: #F2E6D8;
-  color: #1B5760;
+  background-color: #2C3359;
+  color: #79AEF2;
 }
 
 @media (max-width: 75em) {
