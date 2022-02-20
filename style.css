@@ -77,7 +77,6 @@ h1 {
 .project-tiles {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
 }
 .project-tiles a {
@@ -85,7 +84,10 @@ h1 {
 
 }
 .project-tile img {
-  width: 20rem;
+  width: 18rem;
+}
+#interestpage-img{
+  width: 23.2rem;
 }
 
 #contact {
