@@ -1,0 +1,8 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure img {
+  height: 25rem;
+}
