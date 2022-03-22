@@ -9,8 +9,22 @@ const main = document.querySelector('main')
 
 const maleCharacters = people.filter (person => person.gender === 'male') //elegant filter
 const femaleCharacters = people.filter (person => person.gender === 'female')
-const otherCharacters = people.filter (person => person.gender ===  'n/a', 'none', 'hermaphrodite')
+
+/* const otherCharacters = people.filter (person => {
+if (
+  person.gender === 'n/a' ||
+  person.gender ===  'none' ||
+  person.gender ===  'hermaphrodite'
+) {
+  return person
+}
+ return person
+}
+) */
+  
 // todo: filter for other genders (ie, n/a, none, hermaphrodite)
+
+const otherCharacters = people.filter((person) => person.gender !== "male" && person.gender !== "female")
 
 const allCharsButton = document.createElement('button')
 allCharsButton.textContent = 'All Characters'
