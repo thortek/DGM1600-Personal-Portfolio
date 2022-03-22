@@ -6,3 +6,11 @@ main {
 figure img {
   height: 20rem;
 }
+
+button{
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: aquamarine;
+}
