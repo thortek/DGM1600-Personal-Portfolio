@@ -11,6 +11,15 @@ button{
   width: 10rem;
   height: 3rem;
   margin: 1rem;
-  border-radius: 1rem;
-  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: .8rem;
+  background-image: linear-gradient(white, orange);
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+} 
+
+button:hover {
+  box-shadow: 0px 0px 10px purple;
 }
