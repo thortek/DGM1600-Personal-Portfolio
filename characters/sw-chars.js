@@ -12,7 +12,7 @@ allCharsButton.addEventListener('click', function () {
 })
 
 const maleCharacters = people.filter (person => person.gender === 'male') //elegant filter
-// todo: filter for female 
+const femaleCharacters = people.filter (person => person.gender === 'female')
 // todo: filter for other genders (ie, n/a, non, jabba)
 
 
@@ -20,11 +20,17 @@ const maleCharsButton = document.createElement('button')
 maleCharsButton.textContent = 'Male Characters'
 maleCharsButton.addEventListener('click', () => populateDOM(maleCharacters) )
 
-//todo: add famale char button and have it populate the dom 
+const femaleCharsButton = document.createElement('button')
+femaleCharsButton.textContent = 'Female Characters'
+femaleCharsButton.addEventListener('click', () => populateDOM(femaleCharacters) )
+
+
+
 //todo: add other charters button
 
 header.appendChild(allCharsButton)
 header.appendChild(maleCharsButton)
+header.appendChild(femaleCharsButton)
 
 function populateDOM(characters) {
   removeChildren(main)

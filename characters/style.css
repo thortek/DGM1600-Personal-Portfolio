@@ -4,14 +4,14 @@ main {
 }
 
 figure img {
-  height: 20rem;
+  height: 23rem;
 }
 
 button{
   width: 10rem;
   height: 3rem;
   margin: 1rem;
-  border: 1.5px solid black;
+  border: 1.5px solid white;
   border-radius: .8rem;
   background-image: linear-gradient(white, orange);
   color: black;
