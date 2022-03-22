@@ -1,5 +1,5 @@
 import { people } from '../data/people.js'
-
+import { getLastNumber } from './utils/index.js'
 const header = document.querySelector('header')
 const main = document.querySelector('main')
 
@@ -26,16 +26,3 @@ function populateDOM() {
   })
 }
 
-function getLastNumber(url) {
-  //'https://swapi.co/api/films/1/'
-  //'https://swapi.co/api/people/10/'
-  
-  let end = url.lastIndexOf('/')
-  let star = end - 2  
-  console.log(star,end)
-  if (url.charAt (star === '/')) {
-    star++
-  }
-  return url.slice(star, end)
-
-}

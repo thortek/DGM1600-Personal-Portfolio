@@ -1,5 +1,5 @@
 import { films } from '../data/films.js'
-
+import {getLastNumber} from './utils/index.js'
 console.log(films[0].url)
 
 function getLastNumber(url) {
