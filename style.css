@@ -113,12 +113,16 @@ h2 {
   margin: 2rem;
 
 }
+
 .project-tile img {
-  width: 18rem;
+  width: 25rem;
+  height: 15rem;
 }
 #interestpage-img{
-  width: 23.2rem;
+  width: 25rem;
+  height: 15rem;
 }
+
 
 figcaption {
   font-size: x-large;
