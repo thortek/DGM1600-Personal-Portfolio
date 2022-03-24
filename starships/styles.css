@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.mainContainer {
+    display: flex;
+}
+
+.nav {
+    min-width: 20rem;
+}
+.navList {
+    margin: 1rem;
+    list-style-type: none;
+    font-size: larger;
+    color: blueviolet;
+}
+
+a {
+    text-decoration: none;
+}
