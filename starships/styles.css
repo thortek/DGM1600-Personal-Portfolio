@@ -1,6 +1,4 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -12,6 +10,15 @@ body {
     display: flex;
 }
 
+.box {
+    background-color: rgb(140, 169, 223);
+  }
+  
+  .box p {
+    font-size: xx-large;
+    text-align: center;
+  }
+
 .nav {
     min-width: 20rem;
 }
@@ -19,9 +26,9 @@ body {
     margin: 1rem;
     list-style-type: none;
     font-size: larger;
-    color: blueviolet;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
