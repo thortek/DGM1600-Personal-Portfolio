@@ -1,15 +1,18 @@
 *{
     box-sizing: border-box;
+   
 }
 
 h1 {
     text-align: center;
     font-size: xx-large;
-    color: aliceblue;
+    color: #D2D8D9;
+    margin-bottom: 1rem;
+
 }
 
 body {
-    background-color: gray;
+    background-color: #396273;
 }
 
 .mainContainer {
@@ -19,11 +22,17 @@ body {
 .shipViewer {
     display: flex;
     align-items: center;
+    justify-content: right;
+    width: 53rem;
+    height: auto;
 }
 
 
+
+
 .box {
-    background-color: rgb(140, 169, 223);
+    background-color: #6593A6;
+    color: #D2D8D9;
   }
   
   .box p {
@@ -37,10 +46,17 @@ body {
 .navList {
     margin: 1rem;
     list-style-type: none;
-    font-size: larger;
+    font-size: x-large;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #D2D8D9;
+}
+
+footer {
+    color: #D2D8D9;
+    text-align: center;
+    margin-top: 1rem;
+    
 }
