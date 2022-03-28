@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    color: aliceblue;
+}
+
 body {
     background-color: gray;
 }
@@ -9,6 +15,12 @@ body {
 .mainContainer {
     display: flex;
 }
+
+.shipViewer {
+    display: flex;
+    align-items: center;
+}
+
 
 .box {
     background-color: rgb(140, 169, 223);

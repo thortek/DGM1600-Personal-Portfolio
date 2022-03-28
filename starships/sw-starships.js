@@ -6,7 +6,8 @@ const navList = document.querySelector('.navList')
 const shipViewer = document.querySelector('.shipViewer')
 
 const modal = document.querySelector('.modal')
-const closeButton = document.querySelector('.modal-close')
+const closeButton = document.querySelector('.modal-close', 'modal-background')
+
 // TODO: add a click event listener for the modal-background div as well
 const shipMessage = document.querySelector('.box p')
 
