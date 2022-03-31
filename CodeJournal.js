@@ -76,7 +76,8 @@ function sumTwoThings(thing1, thing2) {
   return thing1 + thing2;
 }
 
-// Filter method example.  Filter returns an array of all elements that 'pass the test'
+// Filter method example.  Filter returns an array of all elements that 'pass the test' 
+// Makes a new array
 const pilots = [
   {
     id: 2,
@@ -128,3 +129,5 @@ const filmPlusMore = filmURLs.map((filmURL) => {
 })
 
 const pilotNames = pilots.map(pilot => pilot.name)
+
+// Ternary (tres leches) operator 

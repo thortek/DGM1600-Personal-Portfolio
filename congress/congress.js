@@ -1,6 +1,9 @@
 import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
 
+
+const senatorsDiv = document.querySelector('.senatorsDiv')
+
 function simplifiedSenators() {
     return senators.map(senator => {
       const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
@@ -19,6 +22,10 @@ function simplifiedSenators() {
   }
 
   function populateSenatorDiv(simplifiedSenators) {
+    simplifiedSenators.forEach(senator =>  {
+      const senFigure = document.createElement ('figure')
+      
+    })
     //TODO: create figure element with image and figcaption
     // set the image source to imgURL
     // append children to the DOM
