@@ -40,3 +40,10 @@ figure img {
   align-content: space-between;
   margin: 1rem;
 }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #79AEF2;
+  font-family: sans-serif;
+}
