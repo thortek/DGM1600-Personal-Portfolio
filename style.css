@@ -44,7 +44,7 @@ html {
 .navlist a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: #f0f0f0;
     padding: 1.5rem;
     font-size:larger;
     font-weight: 500;
@@ -154,7 +154,7 @@ figcaption {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #5464BF;
+  text-shadow: 2px 2px 1px #73366F;
   transition: transform 0.3s ease-out;
 }
 
@@ -167,7 +167,7 @@ footer {
   text-align: center;
   padding: 3rem;
   background-color: #2C3359;
-  color: #79AEF2;
+  color: #f0f0f0;
 }
 
 @media (max-width: 75em) {
