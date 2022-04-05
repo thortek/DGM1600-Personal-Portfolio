@@ -22,11 +22,13 @@ body {
 }
 
 .shipViewer {
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 53rem;
-    height: auto;
+    align-items: right;
+    justify-content: center;
+}
+.shipViewer img{
+    padding: 6rem;
 }
 
 .box {
@@ -54,7 +56,7 @@ a {
     background: #5080BF;
 }
 
-a:hover{
+li:hover{
     color: #66A3F2;
     background: #223059;
 }
