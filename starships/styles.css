@@ -8,11 +8,13 @@ h1 {
     font-size: xx-large;
     color: #D2D8D9;
     margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #5080BF;
 
 }
 
 body {
-    background-color: #396273;
+    background-color: #0E1126;
 }
 
 .mainContainer {
@@ -27,12 +29,9 @@ body {
     height: auto;
 }
 
-
-
-
 .box {
-    background-color: #6593A6;
-    color: #D2D8D9;
+    background-color: #223059;
+    color: #7aaef1;
   }
   
   .box p {
@@ -52,11 +51,16 @@ body {
 a {
     text-decoration: none;
     color: #D2D8D9;
+    background: #5080BF;
+}
+
+a:hover{
+    color: #66A3F2;
+    background: #223059;
 }
 
 footer {
-    color: #D2D8D9;
+    color: #66A3F2;
     text-align: center;
     margin-top: 1rem;
-    
 }

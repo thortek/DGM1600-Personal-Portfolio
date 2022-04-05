@@ -38,7 +38,7 @@ function populateShipView(shipData) {
     shipImage.addEventListener('error', () => {
         console.log("Image error!!!!!!")
         shipImage.hidden = true
-        shipMessage.textContent = `The ship known as ${shipData.name} is currently in space port for repairs.`
+        shipMessage.textContent = `Starship known as ${shipData.name} is currently out of service.`
         modal.classList.toggle('is-active')
     })
 
