@@ -53,12 +53,17 @@ body {
 a {
     text-decoration: none;
     color: #D2D8D9;
-    background: #5080BF;
+}
+a:hover{
+    color: #66A3F2;
+}
+li {
+    background-color: #5080BF;
 }
 
 li:hover{
-    color: #66A3F2;
     background: #223059;
+    color: red;
 }
 
 footer {
