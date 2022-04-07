@@ -24,11 +24,10 @@ body {
 .shipViewer {
     height: 100vh;
     display: flex;
-    align-items: right;
     justify-content: center;
 }
 .shipViewer img{
-    padding: 6rem;
+    padding: 3rem;
 }
 
 .box {
