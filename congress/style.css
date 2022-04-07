@@ -22,6 +22,19 @@
     color: #2C3359;
   }
 
+  main h3 {
+    color: #2C3359;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  main ul {
+    color: #2C3359;
+    padding: 1rem;
+  }
+
   figure img {
     display: flex;
     flex-wrap: wrap;
