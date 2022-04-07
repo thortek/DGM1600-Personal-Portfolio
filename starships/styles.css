@@ -2,6 +2,11 @@
     box-sizing: border-box;
    
 }
+img {
+    justify-content: center;
+    height: 100vh;
+    max-width:fit-content;
+}
 
 h1 {
     text-align: center;
@@ -25,10 +30,13 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    padding: 4rem;
+
 }
 .shipViewer img{
-    padding: 8rem;
+    padding: 2rem;
 }
+
 
 .box {
     background-color: #223059;
