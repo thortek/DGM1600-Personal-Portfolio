@@ -2,10 +2,7 @@
     box-sizing: border-box;
    
 }
-element.style{
-    position: static;
-    max-width: none;
-}
+
 
 img{
     height: 100vh;
