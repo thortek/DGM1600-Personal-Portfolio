@@ -2,10 +2,14 @@
     box-sizing: border-box;
    
 }
-img {
-    justify-content: center;
+element.style{
+    position: static;
+    max-width: none;
+}
+
+img{
     height: 100vh;
-    max-width:fit-content;
+    max-width: fit-content;
 }
 
 h1 {
@@ -24,6 +28,7 @@ body {
 
 .mainContainer {
     display: flex;
+
 }
 
 .shipViewer {
@@ -31,8 +36,8 @@ body {
     display: flex;
     justify-content: center;
     padding: 4rem;
-
 }
+
 .shipViewer img{
     padding: 2rem;
 }
@@ -43,7 +48,7 @@ body {
     color: #7aaef1;
   }
   
-  .box p {
+.box p {
     font-size: xx-large;
     text-align: center;
   }
