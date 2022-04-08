@@ -46,9 +46,6 @@ otherCharsButton.textContent = 'Other Characters'
 otherCharsButton.addEventListener('click', () => populateDOM(otherCharacters) )
 
 
-
-//todo: add other charters button
-
 header.appendChild(allCharsButton)
 header.appendChild(maleCharsButton)
 header.appendChild(femaleCharsButton)

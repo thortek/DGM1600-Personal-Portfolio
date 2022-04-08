@@ -49,8 +49,8 @@ function populateShipView(shipData) {
 
 // Viewport 
 
-let viewportHeight = window.innerHeight;
-let viewportWidth = window.innerWidth;
+//let viewportHeight = window.innerHeight;
+//let viewportWidth = window.innerWidth;
 
-console.log(viewportHeight, viewportWidth);
+//console.log(viewportHeight, viewportWidth);
 // viewportHeight  399 , viewportWidth 1440
