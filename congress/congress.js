@@ -50,16 +50,17 @@ function simplifiedSenators() {
   
   seniorityHeader.textContent = `The most senior Senator is ${mostSeniorMember.name} and the biggest fans of vacations are ${biggestVactionerList}.`
 
-   simplifiedSenators().forEach(senator => {
+  simplifiedSenators().forEach(senator => {
    if(senator.loyaltyPct === 100) {
           let listItem = document.createElement('li')  
           listItem.textContent = senator.name
           loyaltyList.appendChild(listItem)
     }
   })
+
   
   //const listItem = simplifiedSenators().reduce((acc, senator) => acc.loyaltyPct > senator.loyaltyPct ? acc : senator)
-  const listItem = simplifiedSenators().filter(senator => senator.loyaltyPct === 100)
+  //const listItem = simplifiedSenators().filter(senator => senator.loyaltyPct === 100)
 
   //const listItem =  simplifiedSenators().forEach(senator => {
   //      if(senator.loyaltyPct === 100){
@@ -74,15 +75,9 @@ function simplifiedSenators() {
 
   //const mostSeniorMemberButton = document.createElement('button')
   //mostSeniorMemberButton.textContent = 'Most Senior'
-  //mostSeniorMemberButton.addEventListener('click', () => populateDOM(mostSeniorMember))
+ // mostSeniorMemberButton.addEventListener('click', () => populateSenatorDiv(mostSeniorMember))
 
-  //seniorityHeader.appendChild(mostSeniorMemberButton)
-
-  const listItemButton = document.createElement('button')
-  listItemButton.textContent = 'Party Loyals'
-  listItemButton.addEventListener('click', () => populateDOM(listItem))
-
-  loyaltyList.appendChild(listItemButton)
+ // seniorityHeader.appendChild(mostSeniorMemberButton)
  
 
 

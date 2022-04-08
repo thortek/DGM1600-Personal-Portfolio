@@ -22,16 +22,12 @@
     color: #2C3359;
   }
 
-  main h3 {
+  main h2 {
+    font-size: large;
     color: #2C3359;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-  }
-
-  main ul {
-    color: #2C3359;
     padding: 1rem;
   }
 
@@ -57,6 +53,24 @@
     border-radius: 5px;
 
   }
+
+  h3 {
+    font-size: x-large;
+    color: #2C3359;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .loyaltyList {
+    color: #2C3359;
+    text-decoration: none;
+    text-align: center;
+    
+  }
+
+
 
   footer {
     text-align: center;
