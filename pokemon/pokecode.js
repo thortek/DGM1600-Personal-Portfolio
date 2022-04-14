@@ -13,17 +13,12 @@ const getAPIData = async (url) => {
   
   async function loadPokemon(offset, limit) {
     const data = await getAPIData('https://pokeapi.co/api/v2/pokemon/')
-    populatePokeGrid(data)
-  }
-  
-  function populatePokeGrid(pokemonArray) {
-    console.log(pokemonArray)
-  // loop through array and populate individual pokemon cards
-    for (const singlePokemon of pokemonArray.results) {
+    for (const nameAndUrl of data.results) {
+      const singlePokemon = await getAPIData(nameAndUrl.url)
       populatePokeCard(singlePokemon)
     }
-    
   }
+  
   
   function populatePokeCard(pokemon) {
     const pokeScene = document.createElement('div')
@@ -38,7 +33,6 @@ const getAPIData = async (url) => {
   }
   
   function populateCardFront(pokemon) {
-    pokemon
     const pokeFront = document.createElement('figure')
     pokeFront.className = 'cardFace'
     const pokeImg = document.createElement('img')
