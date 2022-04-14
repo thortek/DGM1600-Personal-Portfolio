@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pokegrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scene {
+    width: 200px;
+    height: 260px;
+}
+
+figure img {
+    width: 200px;
+}

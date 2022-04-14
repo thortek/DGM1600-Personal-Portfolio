@@ -42,7 +42,7 @@ const getAPIData = async (url) => {
     const pokeFront = document.createElement('figure')
     pokeFront.className = 'cardFace'
     const pokeImg = document.createElement('img')
-    // pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     const pokeCaption = document.createElement('figcaption')
     pokeCaption.textContent = pokemon.name
   
