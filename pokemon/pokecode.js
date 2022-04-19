@@ -1,5 +1,3 @@
-
-
 const getAPIData = async (url) => {
     try {
       const result = await fetch(url)
@@ -31,7 +29,8 @@ const getAPIData = async (url) => {
     const pokeWeight = prompt("What is the Pokemon's weight?", 2000)
     const pokeAbilities = prompt("What are your Pokemon's abilities? (use a comma separated list)")
     const pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
-    
+    const pokeMoves = prompt("what are your Pokemon's moves? (upt to 2 tyepes separated by a space")
+
     const newPokemon = new Pokemon(
       pokeName, 
       pokeHeight, 
@@ -54,15 +53,25 @@ const getAPIData = async (url) => {
     })
     }
 
-  
+  const loadedPokemon = []
+
   async function loadPokemon(offset = 0, limit = 25) {
     const data = await getAPIData(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
     for (const nameAndUrl of data.results) {
       const singlePokemon = await getAPIData(nameAndUrl.url)
-      populatePokeCard(singlePokemon)
+      const simplifiedPokemon = {
+        id: singlePokemon.id,
+        height: singlePokemon.height,
+        weight: singlePokemon.weight,
+        name: singlePokemon.name,
+        abilities: singlePokemon.abilities,
+        types: singlePokemon.types,
+        moves: singlePokemon.moves.slice(0, 3),
+      } 
+      loadedPokemon.push(simplifiedPokemon)
+      populatePokeCard(simplifiedPokemon)
     }
   }
-  
   
   function populatePokeCard(pokemon) {
     const pokeScene = document.createElement('div')
@@ -78,9 +87,19 @@ const getAPIData = async (url) => {
   }
   
   function populateCardFront(pokemon) {
-    pokemon
     const pokeFront = document.createElement('figure')
     pokeFront.className = 'cardFace front'
+
+    const pokeType = pokemon.types[0].type.name
+    const pokeType2 = pokemon.types[1]?.type.name
+     console.log(pokeType, pokeType2)
+    pokeFront.style.setProperty('background', getPokeTypeColor(pokeType))
+  
+    if(pokeType2) {
+      pokeFront.style.setProperty('background', `linear-gradient(${getPokeTypeColor(pokeType)}, ${getPokeTypeColor(pokeType2)})`)
+    } 
+
+
     const pokeImg = document.createElement('img')
     if (pokemon.id === 9001) {
       pokeImg.src = '../images/pokeball.png'
@@ -112,5 +131,53 @@ const getAPIData = async (url) => {
   
     return pokeBack
   }
+
+  function getPokeTypeColor(pokeType) {
+    // if(pokeType === 'grass') return '#00FF00'
+    let color
+    switch (pokeType) {
+      case 'grass':
+        color = '#00FF00'
+        break
+      case 'fire':
+        color = '#FF0000'
+        break
+      case 'water':
+        color = '#0000FF'
+        break
+      case 'bug':
+        color = '#7FFF00'
+        break
+      case 'normal':
+        color = '#F5F5DC'
+        break
+      case 'flying':
+        color = '#00FFFF'
+        break
+      case 'poison':
+        color = '#C300FF'
+        break
+      case 'electric':
+        color = '#C8FF00'
+        break
+      case 'psychic':
+        color = 'pink'
+        break
+      case 'ground':
+        color = 'brown'
+        break
+      default:
+        color = '#888888'
+    }
+    return color
+  }
   
-  loadPokemon(0, 25)
+  function filterPokemonByType(type) {
+    return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
+  }
+  
+  
+  await loadPokemon(0, 60)
+
+  console.log(filterPokemonByType('grass'))
+// not figured out yet what the UI might be for sorted/filtered pokemon...
