@@ -8,8 +8,52 @@ const getAPIData = async (url) => {
       console.error(error)
     }
   }
+
+  class Pokemon {
+    constructor(name, height, weight, abilities, types) {
+      this.id = 9001,
+      this.name = name,
+      this.height = height,
+      this.weight = weight,
+      this.abilities = abilities,
+      this.types = types
+    }
+  }
   
+  const pokeHeader = document.querySelector('header')
   const pokeGrid = document.querySelector('.pokegrid')
+  const newButton = document.createElement('button')
+  newButton.textContent = 'New Pokemon'
+  pokeHeader.appendChild(newButton)
+  newButton.addEventListener('click', () => {
+    const pokeName = prompt('What is the name of your new Pokemon?', 'Thoremon')
+    const pokeHeight = prompt("What is the Pokemon's height?", 80)
+    const pokeWeight = prompt("What is the Pokemon's weight?", 2000)
+    const pokeAbilities = prompt("What are your Pokemon's abilities? (use a comma separated list)")
+    const pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
+    
+    const newPokemon = new Pokemon(
+      pokeName, 
+      pokeHeight, 
+      pokeWeight,
+      makeAbilitiesArray(pokeAbilities), 
+      makeTypesArray(pokeTypes))
+      console.log(newPokemon)
+      populatePokeCard(newPokemon)
+  })
+
+  function makeAbilitiesArray(commaString) { // example comma string 'run-away, gluttony'
+    return commaString.split(',').map((abilityName) => {
+      return { ability: { name: abilityName } }
+    })
+    }
+    
+  function makeTypesArray(spacedString) { // example spaced string 'poison flying'
+    return spacedString.split(' ').map((typeName) => {
+      return { type: { name: typeName } }
+    })
+    }
+
   
   async function loadPokemon(offset = 0, limit = 25) {
     const data = await getAPIData(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
@@ -34,10 +78,15 @@ const getAPIData = async (url) => {
   }
   
   function populateCardFront(pokemon) {
+    pokemon
     const pokeFront = document.createElement('figure')
     pokeFront.className = 'cardFace front'
     const pokeImg = document.createElement('img')
-    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+    if (pokemon.id === 9001) {
+      pokeImg.src = '../images/pokeball.png'
+    } else {
+      pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+    }
     const pokeCaption = document.createElement('figcaption')
     pokeCaption.textContent = pokemon.name
   
@@ -64,4 +113,4 @@ const getAPIData = async (url) => {
     return pokeBack
   }
   
-  loadPokemon(0, 60)
+  loadPokemon(0, 25)
