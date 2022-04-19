@@ -118,16 +118,24 @@ const getAPIData = async (url) => {
     const pokeBack = document.createElement('div')
     pokeBack.className = 'cardFace back'
     const label = document.createElement('h4')
-    label.textContent = 'Abilities'
+    label.textContent = 'Types & Abilities'
     pokeBack.appendChild(label)
-  
+
     const abilityList = document.createElement('ul')
     pokemon.abilities.forEach((abilityItem) => {
       const listItem = document.createElement('li')
       listItem.textContent = abilityItem.ability.name
       abilityList.appendChild(listItem)
     })
+
+    const typesList = document.createElement('dl')
+    pokemon.types.forEach((pokeType) => {
+      const typeItem = document.createElement('dt')
+      typeItem.textContent = pokeType.type.name 
+      typesList.appendChild(typeItem)
+    })
     pokeBack.appendChild(abilityList)
+    pokeBack.appendChild(typesList)
   
     return pokeBack
   }
