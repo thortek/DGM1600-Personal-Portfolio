@@ -3,8 +3,9 @@
     box-sizing: border-box;
   }
 
-  body{
+  main{
     background-image: url(https://images4.alphacoders.com/574/574726.jpg);
+    background-color: #7fad71;
   }
   .pokelogo {
     display: flex;
@@ -19,14 +20,12 @@
 
   h1 {
     text-align: center;
-    color: #183e76;
+    color: #1c4e9f;
     font-family: verdana;
 		text-transform: uppercase;
     font-size: 3rem;
-		background-image: linear-gradient(to right,#183e76 40%, #3564ae 60%);
-		-webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
     margin: 0;
+    -webkit-text-stroke: 2px #ffcb05;
   }
 
   .pokegrid {
@@ -71,7 +70,7 @@
   }
   
   .back {
-    background: rgb(182, 182, 182);
+    background: rgb(207, 207, 207);
     transform: rotateY(180deg);
   }
   .back h4 { 
@@ -111,7 +110,7 @@
     width: 15rem;
     height: 3rem;
     margin: 1rem;
-    border: 1.5px solid white;
+    border: 2px solid #ffcb05;
     border-radius: .3rem;
     background-image: linear-gradient(#3564ae, #183e76);
     color: #ffcb05;
