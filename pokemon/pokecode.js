@@ -26,9 +26,9 @@ const getAPIData = async (url) => {
   newButton.textContent = 'New Pokemon'
   pokeHeader.appendChild(newButton)
   newButton.addEventListener('click', () => {
-    const pokeName = prompt('What is the name of your new Pokemon?', 'Thoremon')
+    const pokeName = prompt('What is the name of your new Pokemon?', 'Cambella')
     const pokeHeight = prompt("What is the Pokemon's height?", 80)
-    const pokeWeight = prompt("What is the Pokemon's weight?", 2000)
+    const pokeWeight = prompt("What is the Pokemon's weight?", 1821)
     const pokeAbilities = prompt("What are your Pokemon's abilities? (use a comma separated list)")
     const pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
     const pokeMoves = prompt("what are your Pokemon's moves? (upt to 2 types separated by a space")
@@ -38,7 +38,8 @@ const getAPIData = async (url) => {
       pokeHeight, 
       pokeWeight,
       makeAbilitiesArray(pokeAbilities), 
-      makeTypesArray(pokeTypes))
+      makeTypesArray(pokeTypes),
+      makeMovesArray(pokeMoves))
       console.log(newPokemon)
       populatePokeCard(newPokemon)
   })
@@ -126,7 +127,7 @@ const getAPIData = async (url) => {
     const pokeBack = document.createElement('div')
     pokeBack.className = 'cardFace back'
     const label = document.createElement('h4')
-    label.textContent = 'Types & Abilities'
+    label.textContent = 'TYPES & Abilities'
     pokeBack.appendChild(label)
 
     const typesList = document.createElement('dl')
@@ -146,14 +147,6 @@ const getAPIData = async (url) => {
 
     pokeBack.appendChild(abilityList)
 
-   // simplifiedPokemon().forEach(pokemon => {
-   //   if (singlePokemon.moves.slice(0, 3)) {
-   //     let pokeMoves = document.createElement('h4')
-   //     pokeMoves.textContent = `moves: ${pokemon.moves}`
-   //     pokeBack.appendChild(pokeMoves)
-   //   }
-   // })
-
     const pokeHeight = document.createElement('h5')
     pokeHeight.textContent = `Height: ${pokemon.height}`
 
@@ -162,10 +155,19 @@ const getAPIData = async (url) => {
 
     pokeBack.appendChild(pokeHeight)
     pokeBack.appendChild(pokeWeight)
-  
+
+   // simplifiedPokemon().forEach(pokemon => {
+   //   if (singlePokemon.moves.slice(0, 3)) {
+   //     let pokeMoves = document.createElement('h4')
+   //     pokeMoves.textContent = `moves: ${pokemon.moves}`
+   //     pokeBack.appendChild(pokeMoves)
+   //   }
+   // })
+
     return pokeBack
   }
 
+  
   function getPokeTypeColor(pokeType) {
     // if(pokeType === 'grass') return '#00FF00'
     let color
@@ -211,7 +213,7 @@ const getAPIData = async (url) => {
   }
   
   
-  await loadPokemon(0, 25)
+  await loadPokemon(0, 29)
 
   console.log(filterPokemonByType('grass'))
 // not figured out yet what the UI might be for sorted/filtered pokemon...
