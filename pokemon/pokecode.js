@@ -8,19 +8,21 @@ const getAPIData = async (url) => {
   }
 
   class Pokemon {
-    constructor(name, height, weight, abilities, types) {
+    constructor(name, height, weight, abilities, types, moves) {
       this.id = 9001,
       this.name = name,
       this.height = height,
       this.weight = weight,
       this.abilities = abilities,
-      this.types = types
+      this.types = types,
+      this.moves = moves
     }
   }
   
   const pokeHeader = document.querySelector('header')
   const pokeGrid = document.querySelector('.pokegrid')
   const newButton = document.createElement('button')
+
   newButton.textContent = 'New Pokemon'
   pokeHeader.appendChild(newButton)
   newButton.addEventListener('click', () => {
@@ -29,7 +31,7 @@ const getAPIData = async (url) => {
     const pokeWeight = prompt("What is the Pokemon's weight?", 2000)
     const pokeAbilities = prompt("What are your Pokemon's abilities? (use a comma separated list)")
     const pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
-    const pokeMoves = prompt("what are your Pokemon's moves? (upt to 2 tyepes separated by a space")
+    const pokeMoves = prompt("what are your Pokemon's moves? (upt to 2 types separated by a space")
 
     const newPokemon = new Pokemon(
       pokeName, 
@@ -52,6 +54,12 @@ const getAPIData = async (url) => {
       return { type: { name: typeName } }
     })
     }
+
+ function makeMovesArray(spacedString) { //Moves
+   return spacedString.split('').map((movesName)=> {
+          return { type: { name: movesName}}
+    })
+  }
 
   const loadedPokemon = []
 
@@ -121,6 +129,14 @@ const getAPIData = async (url) => {
     label.textContent = 'Types & Abilities'
     pokeBack.appendChild(label)
 
+    const typesList = document.createElement('dl')
+    pokemon.types.forEach((pokeType) => {
+      const typeItem = document.createElement('dt')
+      typeItem.textContent = pokeType.type.name 
+      typesList.appendChild(typeItem)
+    })
+    pokeBack.appendChild(typesList)
+
     const abilityList = document.createElement('ul')
     pokemon.abilities.forEach((abilityItem) => {
       const listItem = document.createElement('li')
@@ -128,14 +144,24 @@ const getAPIData = async (url) => {
       abilityList.appendChild(listItem)
     })
 
-    const typesList = document.createElement('dl')
-    pokemon.types.forEach((pokeType) => {
-      const typeItem = document.createElement('dt')
-      typeItem.textContent = pokeType.type.name 
-      typesList.appendChild(typeItem)
-    })
     pokeBack.appendChild(abilityList)
-    pokeBack.appendChild(typesList)
+
+   // simplifiedPokemon().forEach(pokemon => {
+   //   if (singlePokemon.moves.slice(0, 3)) {
+   //     let pokeMoves = document.createElement('h4')
+   //     pokeMoves.textContent = `moves: ${pokemon.moves}`
+   //     pokeBack.appendChild(pokeMoves)
+   //   }
+   // })
+
+    const pokeHeight = document.createElement('h5')
+    pokeHeight.textContent = `Height: ${pokemon.height}`
+
+    const pokeWeight = document.createElement('h5')
+    pokeWeight.textContent = `Weight: ${pokemon.weight}`
+
+    pokeBack.appendChild(pokeHeight)
+    pokeBack.appendChild(pokeWeight)
   
     return pokeBack
   }
@@ -185,7 +211,7 @@ const getAPIData = async (url) => {
   }
   
   
-  await loadPokemon(0, 60)
+  await loadPokemon(0, 25)
 
   console.log(filterPokemonByType('grass'))
 // not figured out yet what the UI might be for sorted/filtered pokemon...
