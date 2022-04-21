@@ -1,3 +1,5 @@
+import { removeChildren } from '../utils/index.js'
+
 const getAPIData = async (url) => {
     try {
       const result = await fetch(url)
@@ -244,19 +246,25 @@ const getAPIData = async (url) => {
   }
   
   function filterPokemonByType(type) {
-    return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
+    return loadedPokemon.filter((pokemon) => {
+      if(pokemon.types[0].type.name === type) return pokemon
+      if((pokemon.types[1]?.type.name) && (pokemon.types[1].type.name === type)) {
+        return pokemon
+      } 
+    })
   }
   
   
-  await loadPokemon(0, 50)
+  await loadPokemon(0, 150)
 
   console.log(filterPokemonByType('grass'))
 // not figured out yet what the UI might be for sorted/filtered pokemon...
 
 const selectType = document.querySelector('.type-selector');
 selectType.addEventListener('change', (event) => {
-  const result = document.querySelectorAll('.result');
-  result.textContent = `You like ${event.target.value}`;
+  console.log(`You like ${event.target.value}`);
+  const filteredByType = filterPokemonByType(event.target.value)
+  // array of pokemon filtered by their type
+  removeChildren(pokeGrid) // clears out the main grid of pokemon displayed
+  filteredByType.forEach(pokemon => populatePokeCard(pokemon))
 })
-
-pokeHeader.appendChild('.type-selector')
