@@ -2,21 +2,27 @@
     margin: 0;
     box-sizing: border-box;
   }
+  main {
+    background-color: #5EBDFC;
+  }
 
   header{
-    background-image: url(https://images4.alphacoders.com/574/574726.jpg);
-    background-color: #7fad71;
-  }
-  header background-image{
-    height: 100%;
+    /* background-image: url(https://images4.alphacoders.com/574/574726.jpg);*/
+    background-color: #F5F5F5;
   }
 
-  .pokelogo {
+   header button .type-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .pokemon-title {
     display: flex;
     justify-content: center;
   }
 
-  .pokelogo img {
+  .pokemon-title img{
     width: 25%;
     height: 15%;
     margin-top: 1rem;
@@ -30,6 +36,44 @@
     font-size: 3rem;
     margin: 0;
     -webkit-text-stroke: 2px #ffcb05;
+  }
+
+  button{
+    width: 15rem;
+    height: 3rem;
+    margin: 2rem;
+    border: 2px solid #ffcb05;
+    border-radius: .3rem;
+    background-image: linear-gradient(#3564ae, #183e76);
+    color: #ffcb05;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+  } 
+
+  button:hover {
+    box-shadow: 0px 0px 15px #ffcb05;
+  }
+
+  .type-selector{
+    width: 15rem;
+    height: 3rem;
+    margin: 2rem;
+    border: 2px solid #ffcb05;
+    border-radius: .3rem;
+    background-image: linear-gradient(#3564ae, #183e76);
+    color: #ffcb05;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+  } 
+
+  .type-selector:hover {
+    box-shadow: 0px 0px 15px #ffcb05;
   }
 
   .pokegrid {
@@ -53,7 +97,7 @@
     cursor: pointer;
     /* position: relative; */
     border-style:solid;
-    border-color: #1c4e9f;
+    border-color: #FFCC00;
     border-width: .2rem;
   }
 
@@ -119,22 +163,5 @@
     width: 200px;
   }
 
-  button{
-    width: 15rem;
-    height: 3rem;
-    margin: 1rem;
-    border: 2px solid #ffcb05;
-    border-radius: .3rem;
-    background-image: linear-gradient(#3564ae, #183e76);
-    color: #ffcb05;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    font-size: medium;
-  } 
 
-  button:hover {
-    box-shadow: 0px 0px 15px #ffcb05;
-  }
  
