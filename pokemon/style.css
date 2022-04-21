@@ -3,10 +3,14 @@
     box-sizing: border-box;
   }
 
-  main{
+  header{
     background-image: url(https://images4.alphacoders.com/574/574726.jpg);
     background-color: #7fad71;
   }
+  header background-image{
+    height: 100%;
+  }
+
   .pokelogo {
     display: flex;
     justify-content: center;
@@ -48,8 +52,11 @@
     transform-style: preserve-3d;
     cursor: pointer;
     /* position: relative; */
+    border-style:solid;
+    border-color: #1c4e9f;
+    border-width: .2rem;
   }
-  
+
   .card.is-flipped {
     transform: rotateY(180deg);
   }
@@ -62,7 +69,7 @@
   }
   
   .front {
-    background-color: rgb(202, 137, 202);
+    color: white;
     text-align: center;
     text-transform: capitalize;
     font-size: x-large;
@@ -75,34 +82,37 @@
   }
   .back h4 { 
     text-align: center;
-    margin: 0;
-    color: black;
+    margin-top: .6rem;
+    color: #1c4e9f;
     font-family: verdana;
-    margin-top: .3rem;
+    font-size: small;
   }
   .back dl {
-    color: black;
+    color: #183e76;
     margin: 0;
     text-transform:uppercase;
     font-family: verdana;
     text-align: center;
-    margin-bottom: .3rem;
+    margin-bottom: .5rem;
     font-size: small;
   }
 
   .back ul {
-    color: black;
+    color: #183e76;
     text-transform: capitalize;
     list-style-type:circle;
     margin: 0;
     font-family: verdana;
-    margin-bottom: .3rem;
+    margin-bottom: .5rem;
+    font-size: small;
   }
 
   .back h5 {
+    color: #1c4e9f;
     text-align: center;
     font-size: small;
     font-family: verdana;
+    
   }
   
   figure img {
